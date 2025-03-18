@@ -152,7 +152,7 @@ export default function ExpertContact() {
                 <div className="mt-4 space-y-4 text-muted-foreground">
                   <p>
                     Abhinav is a leading expert in 3D printing technologies with
-                    over 15 years of industrial experience with diversified
+                    over 10 years of industrial experience with diversified
                     industry verticals.
                   </p>
                   <p>
