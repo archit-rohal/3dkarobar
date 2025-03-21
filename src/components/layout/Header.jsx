@@ -39,29 +39,6 @@ const navigation = [
       }
     ]
   },
-  // {
-  //   name: 'Manufacturing Services',
-  //   url: '#',
-  //   dropdown: [
-  //     {
-  //       name: 'Medical Implant',
-  //       url: '#',
-  //     },
-  //     {
-  //       name: 'Medical Devices',
-  //       url: '#',
-  //     },
-  //     {
-  //       name: 'Dental Brackets',
-  //       url: '#',
-  //     },
-  //     {
-  //       name: 'Multi-Material Production',
-  //       url: '#',
-  //     }
-  //   ]
-  // },
-
   {
     name: 'MANUFACTURING SERVICES',
     url: '#',
@@ -75,11 +52,7 @@ const navigation = [
         url: '/manufacturing-services/MedicalDevices',
       },
       {
-        name: 'Dental Brackets',
-        url: '/manufacturing-services/DentalBrackets',
-      },
-      {
-        name: '3D Printing of Diverse Materials',
+        name: 'Multi-Material Production',
         url: '/manufacturing-services/MultiMaterials',
       }
     ]

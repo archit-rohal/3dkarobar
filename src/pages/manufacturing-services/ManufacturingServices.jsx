@@ -37,18 +37,6 @@ export default function ManufacturingServices() {
       ]
     },
     {
-      title: "Dental Brackets",
-      description: "High-precision dental brackets and orthodontic components manufactured using advanced 3D printing technologies.",
-      image: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99",
-      link: "/manufacturing-services/DentalBrackets",
-      features: [
-        "High precision",
-        "Biocompatible materials",
-        "Custom solutions",
-        "Fast production"
-      ]
-    },
-    {
       title: "Multi-Material Production",
       description: "Advanced manufacturing capabilities combining multiple materials for complex functional parts.",
       image: "https://images.unsplash.com/photo-1581093677620-8cb2c2c5f138",
