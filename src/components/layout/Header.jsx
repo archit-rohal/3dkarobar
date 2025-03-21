@@ -268,9 +268,9 @@ export function Header() {
         isScrolled ? 'backdrop-blur-nav py-3' : 'py-5'
       )}
     >
-      <Container className="flex items-center">
+      <Container className="flex items-center justify-between"> {/* Changed to justify-between */}
         {/* Logo - Left */}
-        <div className="w-[140px] md:w-[200px]">
+        <div className="w-[160px] md:w-[180px] flex-shrink-0"> {/* Adjusted width and added flex-shrink-0 */}
           <Link to="/" className="flex items-center">
             <div className="h-12 md:h-16">
               <Logo 
@@ -283,13 +283,13 @@ export function Header() {
           </Link>
         </div>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex flex-1 justify-center">
-          <div className="flex space-x-12">
+        {/* Desktop Navigation - Center */}
+        <nav className="hidden md:flex flex-1 justify-center mx-8"> {/* Added mx-8 for spacing */}
+          <div className="flex items-center space-x-8"> {/* Changed space-x-12 to space-x-8 */}
             {navigation.map((item) => (
               item.dropdown ? (
                 <div key={item.name} className="relative dropdown-container group">
-                  <span className="nav-link cursor-pointer font-semibold">
+                  <span className="nav-link cursor-pointer font-semibold whitespace-nowrap"> {/* Added whitespace-nowrap */}
                     {item.name}
                   </span>
                   <div className="dropdown-menu mt-1 min-w-[180px] w-max rounded-md border border-border bg-card shadow-soft animate-fade-in">
@@ -312,7 +312,7 @@ export function Header() {
                   key={item.name} 
                   to={item.url} 
                   className={cn(
-                    "nav-link font-semibold",
+                    "nav-link font-semibold whitespace-nowrap", // Added whitespace-nowrap
                     location.pathname === item.url && "text-busybee-500"
                   )}
                 >
@@ -323,27 +323,30 @@ export function Header() {
           </div>
         </nav>
 
-        {/* Actions */}
-        <div className="flex-1 md:w-[200px] flex justify-end">
-          <div className="flex items-center space-x-4">
-            <Button to="/expert-contact" variant="default" size="sm" className="hidden md:flex animate-pulse-slow">
-              Talk to our Expert
-            </Button>
+        {/* Actions - Right */}
+        <div className="flex-shrink-0 flex items-center"> {/* Added flex-shrink-0 */}
+          <Button 
+            to="/expert-contact" 
+            variant="default" 
+            size="sm" 
+            className="hidden md:flex animate-pulse-slow whitespace-nowrap" // Added whitespace-nowrap
+          >
+            Talk to our Expert
+          </Button>
 
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2"
-              aria-label="Toggle menu"
-            >
-              {isMobileMenuOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                </svg>
-              )}
-            </button>
-          </div>
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden p-2 ml-4"
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            )}
+          </button>
         </div>
       </Container>
 
