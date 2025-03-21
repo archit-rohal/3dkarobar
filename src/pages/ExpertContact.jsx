@@ -133,7 +133,12 @@ export default function ExpertContact() {
                   </div>
 
                   <div className="mt-6">
-                    <Button className="w-full">Schedule a Meeting</Button>
+                    <Button 
+                      className="w-full"
+                      onClick={() => window.open('https://outlook.office.com/bookwithme/user/6db58c588ce04504bab5a417f9df38cf%40incus3d.com/meetingtype/cfwcxWnC6k6Gb53729kfSw2?anonymous', '_blank')}
+                    >
+                      Schedule a Meeting
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -192,7 +197,11 @@ export default function ExpertContact() {
                   business.
                 </p>
                 <div className="mt-4 flex flex-wrap gap-4">
-                  <Button>Schedule a Meeting</Button>
+                  <Button
+                    onClick={() => window.open('https://outlook.office.com/bookwithme/user/6db58c588ce04504bab5a417f9df38cf%40incus3d.com/meetingtype/cfwcxWnC6k6Gb53729kfSw2?anonymous', '_blank')}
+                  >
+                    Schedule a Meeting
+                  </Button>
                   <Button variant="outline">Send a Message</Button>
                 </div>
               </div>
