@@ -81,7 +81,7 @@ export default function Printers() {
           {printerCategories.map((category, index) => (
             <div 
               key={index}
-              className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+              className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start" // Changed items-center to items-start
             >
               <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
                 <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-medium">
@@ -93,28 +93,28 @@ export default function Printers() {
                 </div>
               </div>
               
-<div className="flex flex-col h-full justify-between">
-              <div>
-                <h2 className="text-3xl font-bold">{category.title}</h2>
-                <p className="mt-4 text-lg text-muted-foreground">
-                  {category.description}
-                </p>
-                
-                <div className="mt-6">
-                  <h3 className="text-lg font-semibold mb-3">Key Features:</h3>
-                  <ul className="space-y-2">
-                    {category.features.map((feature, i) => (
-                      <li key={i} className="flex items-start">
-                        <span className="text-busybee-500 mr-2">•</span>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
+              <div className="flex flex-col h-full">
+                <div className="flex-1"> {/* Added flex-1 to push button to bottom */}
+                  <h2 className="text-3xl font-bold">{category.title}</h2>
+                  <p className="mt-4 text-lg text-muted-foreground">
+                    {category.description}
+                  </p>
+                  
+                  <div className="mt-6">
+                    <h3 className="text-lg font-semibold mb-3">Key Features:</h3>
+                    <ul className="space-y-2">
+                      {category.features.map((feature, i) => (
+                        <li key={i} className="flex items-start">
+                          <span className="text-busybee-500 mr-2">•</span>
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-</div>
 
-                <Link to={category.link}>
-                  <Button className="mt-8 group">
+                <Link to={category.link} className="block mt-8"> {/* Added block and consistent margin */}
+                  <Button className="w-full md:w-auto group">
                     Explore {category.title}
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
