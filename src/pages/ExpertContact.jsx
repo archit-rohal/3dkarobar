@@ -202,7 +202,17 @@ export default function ExpertContact() {
                   >
                     Schedule a Meeting
                   </Button>
-                  <Button variant="outline">Send a Message</Button>
+                  <Button 
+                    variant="outline"
+                    onClick={() => {
+                      const message = "Hi Abhinav, I'm interested in learning more about 3D Karobar's solutions.";
+                      const phoneNumber = "436776167828"; // Remove spaces and international prefix '+' from phone number
+                      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                      window.open(whatsappUrl, '_blank');
+                    }}
+                  >
+                    Send a Message
+                  </Button>
                 </div>
               </div>
             </div>
