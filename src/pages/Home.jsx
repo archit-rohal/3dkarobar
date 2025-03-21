@@ -335,24 +335,26 @@ export default function Home() {
             <Link
               to={item.link}
               key={index}
-              className="block bg-card border border-border rounded-lg overflow-hidden shadow-soft transition-all duration-300 hover:shadow-medium hover:-translate-y-1 animate-fade-in"
+              className="block bg-card border border-border rounded-lg overflow-hidden shadow-soft transition-all duration-300 hover:shadow-medium hover:-translate-y-1 animate-fade-in h-full"
               style={{ animationDelay: `${item.delay}ms` }}
             >
-              <div className="aspect-w-16 aspect-h-9 w-full h-48 relative overflow-hidden">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
-                />
-              </div>
-              <div className="p-6 flex flex-col justify-between h-full">
-                <div>
-                  <h3 className="text-xl font-semibold">{item.title}</h3>
-                  <p className="mt-2 text-muted-foreground">{item.description}</p>
+              <div className="h-full flex flex-col">
+                <div className="aspect-w-16 aspect-h-9 w-full h-48 relative overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
+                  />
                 </div>
-                <div className="mt-4 text-busybee-500 flex items-center">
-                  Learn more
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <div className="p-6 flex-1 flex flex-col">
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold">{item.title}</h3>
+                    <p className="mt-2 text-muted-foreground">{item.description}</p>
+                  </div>
+                  <div className="mt-4 text-busybee-500 flex items-center">
+                    Learn more
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </div>
                 </div>
               </div>
             </Link>
