@@ -171,6 +171,68 @@ import { cn } from '@/lib/utils';
 import { Logo } from '../ui/Logo';
 import { X } from 'lucide-react';
 
+// Add back the navigation configuration
+const navigation = [
+  {
+    name: '3D PRINTERS',
+    url: '#',
+    dropdown: [
+      {
+        name: 'Metal 3D Printers',
+        url: '/printers/metal',
+      },
+      {
+        name: 'Polymer 3D Printers',
+        url: 'printers/polymer',
+      },
+      {
+        name: 'Other 3D Printers',
+        url: '/printers/other',
+      }
+    ]
+  },
+  {
+    name: 'MATERIALS',
+    url: '#',
+    dropdown: [
+      {
+        name: 'Metal Powder',
+        url: '/materials/metal-powder',
+      },
+      {
+        name: 'Resin',
+        url: '/materials/resin',
+      }
+    ]
+  },
+  {
+    name: 'MANUFACTURING SERVICES',
+    url: '#',
+    dropdown: [
+      {
+        name: 'Medical Implant',
+        url: '/manufacturing-services/MedicalImplants',
+      },
+      {
+        name: 'Medical Devices',
+        url: '/manufacturing-services/MedicalDevices',
+      },
+      {
+        name: 'Multi-Material Production',
+        url: '/manufacturing-services/MultiMaterials',
+      }
+    ]
+  },
+  {
+    name: 'ABOUT US',
+    url: '/about',
+  },
+  {
+    name: 'CONTACT',
+    url: '/contact',
+  }
+];
+
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
