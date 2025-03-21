@@ -81,7 +81,7 @@ export default function Printers() {
           {printerCategories.map((category, index) => (
             <div 
               key={index}
-              className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start" // Changed items-center to items-start
+              className="grid grid-cols-1 lg:grid-cols-2 gap-12"
             >
               <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
                 <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-medium">
@@ -93,8 +93,8 @@ export default function Printers() {
                 </div>
               </div>
               
-              <div className="flex flex-col h-full">
-                <div className="flex-1"> {/* Added flex-1 to push button to bottom */}
+              <div className="flex flex-col">
+                <div>
                   <h2 className="text-3xl font-bold">{category.title}</h2>
                   <p className="mt-4 text-lg text-muted-foreground">
                     {category.description}
@@ -113,12 +113,15 @@ export default function Printers() {
                   </div>
                 </div>
 
-                <Link to={category.link} className="block mt-8"> {/* Added block and consistent margin */}
-                  <Button className="w-full md:w-auto group">
-                    Explore {category.title}
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </Link>
+                {/* This ensures all buttons are exactly 92px from the bottom of their containers */}
+                <div className="h-[92px] flex items-end">
+                  <Link to={category.link} className="block w-full md:w-auto">
+                    <Button className="w-full md:w-auto group">
+                      Explore {category.title}
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </div>
           ))}
