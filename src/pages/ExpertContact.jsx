@@ -21,7 +21,7 @@ export default function ExpertContact() {
         <Container>
           <div className="max-w-3xl animate-slide-in">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-              Talk to Our 3D Printing Expert
+              Talk to Our Expert
             </h1>
             <p className="mt-6 text-lg text-muted-foreground">
               Get personalized guidance from our team of specialists to find the
