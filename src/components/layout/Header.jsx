@@ -211,15 +211,15 @@ const navigation = [
     dropdown: [
       {
         name: 'Medical Implant',
-        url: '/manufacturing-services/MedicalImplants',
+        url: '/manufacturing-services/medical-implants',
       },
       {
         name: 'Medical Devices',
-        url: '/manufacturing-services/MedicalDevices',
+        url: '/manufacturing-services/medical-devices',
       },
       {
         name: 'Multi-Material Production',
-        url: '/manufacturing-services/MultiMaterials',
+        url: '/manufacturing-services/multi-materials',
       }
     ]
   },

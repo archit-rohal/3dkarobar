@@ -16,6 +16,8 @@ import LithographyPrinter from "./pages/printers/metal/Lithography";
 import Printers from "./pages/printers/Printers";
 import Materials from "./pages/materials/Materials";
 import ManufacturingServices from "./pages/manufacturing-services/ManufacturingServices";
+import { ComingSoon } from "./pages/ComingSoon";
+
 
 const queryClient = new QueryClient();
 
@@ -31,14 +33,22 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/expert-contact" element={<ExpertContact />} />
-          <Route path="/materials" element={<Materials />} />
+          <Route path="/materials" element={<ComingSoon />} />
+          <Route path="/materials/metal-powder" element={<ComingSoon />} /> {/* Added */}
+          <Route path="/materials/resin" element={<ComingSoon />} /> {/* Added */}
           <Route path="/manufacturing-services" element={<ManufacturingServices />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/manufacturing-services/medical-implants" element={<ComingSoon />} />
+          <Route path="/manufacturing-services/medical-devices" element={<ComingSoon />} />
+          <Route path="/manufacturing-services/multi-materials" element={<ComingSoon />} />
           <Route path="/printers/metal" element={<MetalPrinters />} />
           <Route path="/printers/metal/laser" element={<LaserPrinter />} />
           <Route path="/printers/metal/ebm" element={<EBMPrinter />} />
           <Route path="/printers/metal/binderjet" element={<BinderjetPrinter />} />
           <Route path="/printers/metal/lithography" element={<LithographyPrinter />} />
+          <Route path="/printers/polymer" element={<ComingSoon />} />
+          <Route path="/printers/other" element={<ComingSoon />} />
+          <Route path="/careers" element={<ComingSoon />} />
+          <Route path="/blog" element={<ComingSoon />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

@@ -16,7 +16,7 @@ export default function ManufacturingServices() {
       title: "Medical Implants",
       description: "Custom medical implants manufactured with biocompatible materials using advanced metal 3D printing technologies.",
       image: "https://images.unsplash.com/photo-1583912268183-a34d41fe464a",
-      link: "/manufacturing-services/MedicalImplants",
+      link: "/manufacturing-services/medical-implants",  // Must match App.tsx route exactly
       features: [
         "FDA-compliant processes",
         "Biocompatible materials",
@@ -28,7 +28,7 @@ export default function ManufacturingServices() {
       title: "Medical Devices",
       description: "Precision medical devices and instruments manufactured with strict quality control and regulatory compliance.",
       image: "https://images.unsplash.com/photo-1576086213369-97a306d36557",
-      link: "/manufacturing-services/MedicalDevices",
+      link: "/manufacturing-services/medical-devices",  // Must match App.tsx route exactly
       features: [
         "ISO 13485 certified",
         "Clean room facilities",
@@ -40,7 +40,7 @@ export default function ManufacturingServices() {
       title: "Multi-Material Production",
       description: "Advanced manufacturing capabilities combining multiple materials for complex functional parts.",
       image: "https://images.unsplash.com/photo-1581093677620-8cb2c2c5f138",
-      link: "/manufacturing-services/MultiMaterials",
+      link: "/manufacturing-services/multi-materials",  // Must match App.tsx route exactly
       features: [
         "Material combinations",
         "Functional integration",
