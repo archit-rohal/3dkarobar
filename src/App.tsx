@@ -17,7 +17,7 @@ import Printers from "./pages/printers/Printers";
 import Materials from "./pages/materials/Materials";
 import ManufacturingServices from "./pages/manufacturing-services/ManufacturingServices";
 import { ComingSoon } from "./pages/ComingSoon";
-
+import { ChannelPartnerFAB } from '@/components/ui/ChannelPartnerFAB';
 
 const queryClient = new QueryClient();
 
@@ -52,6 +52,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      <ChannelPartnerFAB />
     </TooltipProvider>
   </QueryClientProvider>
 );
